@@ -3,7 +3,12 @@ guid: a2b5e39db70d102469e54ac11a918a6d
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dyno_tex_Material_u1_v1
+    second: {fileID: 2100000, guid: e616e3bf05870f242b212dd7b8d293d9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

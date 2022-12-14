@@ -46,7 +46,6 @@ public class DragObject : MonoBehaviour
 
         if (IsDraging && hitted && hit.transform.gameObject == target)
         {
-            transform.position = Vector3.Lerp(transform.position, target.transform.position, movementSpeed * Time.deltaTime);
             transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, movementSpeed * Time.deltaTime);
         }
         else

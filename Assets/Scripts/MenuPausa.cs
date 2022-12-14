@@ -42,11 +42,13 @@ public class MenuPausa : MonoBehaviour
     public void MenuLevels()
     {
         SceneManager.LoadScene(1);
+        GameIsPaused = false;
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+        GameIsPaused = false;
     }
 
     public void QuitGame()
