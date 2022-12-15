@@ -22,6 +22,8 @@ public class DragObject : MonoBehaviour
 
     private Vector3 mOffset;
 
+    public AudioSource click;
+
     private float mzCoord;
     private void Start()
     {
@@ -65,6 +67,7 @@ public class DragObject : MonoBehaviour
                 this.enabled = false;
                 gameObject.GetComponent<MeshCollider>().enabled = false;
                 target.SetActive(false);
+                click.Play();
             }
             else
             {

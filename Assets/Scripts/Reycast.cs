@@ -10,6 +10,8 @@ public class Reycast : MonoBehaviour
     public float force;
     public GameObject polvo;
 
+    public AudioSource rock;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,15 @@ public class Reycast : MonoBehaviour
                 hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 hit.transform.gameObject.GetComponent<Rigidbody>().AddForce(-transform.forward * force, ForceMode.Impulse);
                 Instantiate(polvo, hit.point, Quaternion.identity);
+                if (!rock.isPlaying)
+                {
+                    rock.Play();
+                }
             }
+        }
+        else
+        {
+            rock.Stop();
         }
     }
 }
